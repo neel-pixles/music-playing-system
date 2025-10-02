@@ -1,0 +1,364 @@
+body{
+    background-image: url(Pure\ Black\ Dark\ Background\ Wallpaper\,\ Wallpaper\,\ Wallpaper\ Powerpoint\,\ Pure\ Black\ Background\ Image\ And\ Wallpaper\ for\ Free\ Download.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 10px;
+    scroll-behavior: smooth;
+}
+*{
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+}
+/* Add this CSS for animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.music-item {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.highlight {
+    background-color: yellow;
+    color: black;
+}
+
+.search_bar{
+    text-align: center;
+}
+.search_bar input{
+    margin-top: 20px;
+    width: 300px;
+    font-size: 18px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    transition-duration: 0.4s;
+    border-color: black;
+    
+}
+.search_bar input:hover{
+    width: 350px;
+  
+}
+.search_bar input:focus{
+    width: 400px;
+}
+.search_bar i{
+    color: white;
+}
+
+
+.pop img{
+        height: 100px;
+        width: 100px;
+        transition: all 0.5s ease;
+}
+.pop img:hover{
+    width: 150px;
+    height: 150px;
+    filter: blur(3px);
+} 
+
+
+.pop .music-item {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+}
+.pop .hover-text {
+   
+    font-weight: bold;
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+    font-size: 14px;
+    padding: 6px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.pop .music-item:hover .hover-text {
+    opacity: 1;
+    bottom: 0;
+}
+.more-tag .fa-solid{
+    font-size: 30px;
+    transition-duration: 0.3s;
+}
+.more-tag .fa-solid:hover{
+    font-size: 35px;
+}
+
+.hindi .music-item {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+}
+.hindi .hover-text {
+    
+    font-weight: bold;
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+    font-size: 14px;
+    padding: 6px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.hindi .music-item:hover .hover-text {
+    opacity: 1;
+    bottom: 0;
+}
+
+.hindi img{
+    height: 100px;
+    width: 100px;
+    transition: all 0.5s ease;
+}
+.hindi img:hover{
+    width: 150px;
+    height: 150px;
+  
+}
+
+.old .music-item {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+}
+.old .hover-text {
+    
+  font-weight: bold;
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+    font-size: 14px;
+    padding: 6px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.old .music-item:hover .hover-text {
+    opacity: 1;
+    bottom: 0;
+}
+.old img{
+    height: 100px;
+    width: 100px;
+    transition: all 0.5s ease;
+}
+.old img:hover{
+    width: 150px;
+    height: 150px;
+    filter: blur(3px);
+}
+
+.punjabi .music-item{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+}
+.punjabi .hover-text {
+   
+    font-weight: bold;
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+    font-size: 14px;
+    padding: 6px;
+    text-align: center;
+    border: 1px solid black;
+}
+.punjabi .music-item:hover .hover-text {
+    opacity: 1;
+    bottom: 0;
+}
+.punjabi img{
+    height: 100px;
+    width: 100px;
+    transition: all 0.5s ease;
+}
+.punjabi img:hover{
+    width: 150px;
+    height: 150px;
+    filter: blur(3px);
+}
+
+.popartist img{
+    height: 110px;
+    width: 110px;
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+.popartist img:hover{
+    width: 140px;
+    height: 140px;
+    
+}
+.hindiartist img{
+    height: 110px;
+    width: 110px;
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+.hindiartist img:hover{
+    width: 140px;
+    height: 140px;
+   
+}
+.hindiartist i{
+    color: white;
+    align-items: center;
+    font-size: 15px;
+    text-align: end;    
+    margin-left: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.artist i:hover{
+    font-size: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+/* General Fade-In Animation */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}

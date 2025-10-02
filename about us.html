@@ -1,0 +1,307 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+              /*transprent nav bar css str*/
+.navbar-inverse {
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+    border-color: transparent;
+}
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+    font-weight: 50px;
+    transition-duration: 0.3s linear;
+    color: rgb(255, 255, 255); /* White text for links */
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #00ffdd; /* Change color on hover */
+}
+.navbar-inverse .navbar-toggle {
+    border-color: white;
+}
+.navbar-inverse .icon-bar {
+    background-color: white;
+}
+ /*transprent nav bar css end*/
+        body {
+            background-color: black;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 10px;
+        }
+        
+        header {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        .about {
+            max-width: 800px;
+            margin: 0 auto;
+            color: white;
+        }
+        
+        .about h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .about h3 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        
+        .about ul {
+            padding-left: 20px;
+        }
+        
+        .about ul li {
+            margin-bottom: 10px;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse ">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" data-target="#mobile_menu" data-toggle="collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                         <a href="1.html" class="navbar-brand"><i class="fa-solid fa-music"></i> Music Player</a>
+                    </div>
+
+                    <div class="navbar-collapse collapse" id="mobile_menu">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="1.html">Home</a></li>
+                            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Category <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="partypage.html">Party Songs</a></li>
+                                    <li><a href="love songs.html">Love Songs</a></li>
+                                    <li><a href="instrumental.html">instrumental</a></li>
+                                    <li><a href="bhajan.html">Bhajan</a></li>
+                                </ul>
+                            </li>
+                          
+                            <li><a href="myplaylist.html">My Playlist</a></li>
+                            <li><a href="likedpage.html">Liked</a></li>
+                        
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="./profile/profile.html"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="./loginform/login.html">Login</a></li>
+                                    <li><a href="./signup/signup.html">Sign Up</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <main>
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Music Player</p>
+            <p>At Music Player, we believe that music is more than just sound—it's a journey, an emotion, and a universal language that connects us all. Our mission is to bring you closer to the melodies and rhythms that make life extraordinary.</p>
+
+            <h3>Who We Are</h3>
+            <p>Founded by a team of passionate music enthusiasts and tech innovators, Music Player is dedicated to creating a seamless and personalized music experience. With backgrounds in music theory, software engineering, and user experience design, we combine our expertise to bring you the ultimate platform for discovering, enjoying, and sharing your favorite tunes.</p>
+
+            <h3>What We Do</h3>
+            <ul>
+                <li><strong>Intuitive Music Player:</strong> Enjoy high-quality playback with a sleek, user-friendly interface designed for all your devices.</li>
+                <li><strong>Personalized Recommendations:</strong> Discover new artists and songs tailored to your taste using our smart recommendation engine.</li>
+                <li><strong>Seamless Integration:</strong> Connect with your favorite streaming services and manage your music library effortlessly.</li>
+                <li><strong>Community Features:</strong> Share playlists, follow friends, and join music communities to stay connected with fellow music lovers.</li>
+            </ul>
+
+            <h3>Our Vision</h3>
+            <p>We envision a world where music is easily accessible, deeply personal, and shared with those who matter most. Our goal is to break down barriers and bring the joy of music to everyone, whether you're an avid audiophile or just someone who loves a good tune.</p>
+
+            <h3>Join Us</h3>
+            <p>We're excited to have you on this musical journey with us. If you have any questions, feedback, or just want to chat about your favorite tracks, don't hesitate to reach out. Together, let's explore the endless possibilities of sound and create a harmonious world.</p>
+            <p>Stay tuned, stay groovy!</p>
+
+            <p>— The Music Player Team</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="about us.html">about us</a></li>
+                        <li><a href="our service.html">our services</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="Q&A.html">FAQ</a></li>
+                        <li><a href="privacy policy.html">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-phone" style="color:#e91e63;"></i> +91 90904500112</a></li>
+                        <li><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"><i class="fa-solid fa-envelope" style="color:#e91e63;"></i> musicplayer7893@gmail.com</a></li>
+                        <li><a href="send feedback.html"><i class="fa-solid fa-paper-plane" style="color:#e91e63;"></i> send feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/neel_2_009/?next=%2F"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+   
+</body>
+</html>

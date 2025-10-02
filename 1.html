@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=nav, initial-scale=1.0">
+    <title>Music PLayer</title>
+    <link rel="stylesheet" href="1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        /*transprent nav bar css str*/
+.navbar-inverse {
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+    border-color: transparent;
+}
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+    font-weight: 50px;
+    transition-duration: 0.3s linear;
+    color: rgb(255, 255, 255); /* White text for links */
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #00ffdd; /* Change color on hover */
+}
+.navbar-inverse .navbar-toggle {
+    border-color: white;
+}
+.navbar-inverse .icon-bar {
+    background-color: white;
+}
+ /*transprent nav bar css end*/
+/* Add this CSS for animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.music-item {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.highlight {
+    background-color: yellow;
+    color: black;
+}
+
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse ">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" data-target="#mobile_menu" data-toggle="collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                         <a href="1.html" class="navbar-brand"><i class="fa-solid fa-music"></i> Music Player</a>
+                    </div>
+
+                    <div class="navbar-collapse collapse" id="mobile_menu">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="1.html">Home</a></li>
+                            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Category <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="partypage.html">Party Songs</a></li>
+                                    <li><a href="morepoppage.html">english</a></li>
+                                    <li><a href="morehindipage.html">hindi</a></li>
+                                    <li><a href="more90&80page.html">90's</a></li>
+                                    <li><a href="more90&80page.html">Punjabi</a></li>
+                                </ul>   
+                            </li>
+                          
+                            <li><a href="myplaylist.html">My Playlist</a></li>
+                            <li><a href="likedpage.html">Liked</a></li>
+                        
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="./profile/profile.html"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="./loginform/login.html">Login</a></li>
+                                    <li><a href="./signup/signup.html">Sign-Up</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <div class="search_tag">
+        <div class="search_bar">
+            <input type="text" id="searchInput" placeholder="Search songs..." onkeyup="searchSongs()">
+            <i class="fa fa-magnifying-glass"></i>
+        </div>
+    </div>
+       <div class="fade-in">
+        <div class="pop">
+           <div class="more-tag">
+            <h1 style="color: rgb(255, 255, 255);margin-left: 30px;">POP
+                <a href="morepoppage.html" style="font-size: 20px;color: white;"><i class="fa-solid fa-angles-right"></i></a>
+            </h1>
+            </div>        
+            <ul id="songsList" style="text-align: center;">
+                    <div class="music-item">
+                        <a href="./dieforyou_mp/dieforyou.html">
+                            <img src="die for you.jfif" alt="">
+                        <div class="hover-text">Die For You</div>
+                    </a>
+                    </div>
+                    <div class="music-item">
+                        <a href="./trance_mp/trance.html"><img src="Trance Wall And Art Print _ Trance.jfif" alt="">
+                        <div class="hover-text">Trance</div></a>
+                    </div>
+               
+                     <div class="music-item">
+                        <a href="./shapofyou_mp/shapofyou.html"><img src="download.jfif" alt="">
+                        <div class="hover-text">Shap of you</div></a>
+                    </div>
+                    <div class="music-item">
+                         <a href="./starboy_mp/starboy.html"><img src="You are my everything the music to my soul….jfif" alt="">
+                         <div class="hover-text">starboy</div></a>
+                    </div>
+                     <div class="music-item">
+                        <a href="./letmeloveyou_mp/letmeloveyou.html"><img src="X.jfif" alt="">
+                            <div class="hover-text">Let me love you</div></a>
+                     </div>
+                <div class="music-item">
+                    <a href="./confident_mp/confident.html"><img src="Confident (feat_ Chance the Rapper) - Single.jfif" alt="">
+                    <div class="hover-text">Confident</div></a>
+                </div>
+                <div class="music-item">
+                    <a href="./baby_mp/baby.html"><img src="30 Baby Shower Games That Are Actually Fun - Copy.jfif" alt="">
+                        <div class="hover-text">Baby</div></a>
+                </div>
+                <div class="music-item">
+                    <a href="./wedont talk anymore_mp/wedonttalkanymore.html"><img src="./wedont talk anymore_mp/We Don't Talk Anymore.jfif" alt="">
+                        <div class="hover-text">We don't talk any more</div></a>
+                </div>
+                <div class="music-item">
+                    <a href="./untile i found you_mp/untilifoundyou.html"><img src="Spotify Iphone Music Until I Found You.jfif" alt="">
+                        <div class="hover-text">Until i found oyu</div></a>
+                </div>
+                <div class="music-item">
+                    <a href="./perfect_mp/perfect.html"><img src="20240630_144437.jpg" alt="">
+                        <div class="hover-text">Perfect</div></a>
+                </div>
+                <div class="music-item">
+                    <a href="./dynamite_mp/dynamite.html"><img src="BTS.jfif" alt="">
+                        <div class="hover-text">Dynamite</div></a>
+                </div>
+                <div class="music-item">
+                    <a href="./night changes_mp/nightchanges.html"><img src="20240630_145658.jpg" alt="">
+                    <div class="hover-text">Night changes</div></a>
+                </div>   
+            </div>
+       </div>
+
+        <div class="fade-in">
+            <div class="hindi">
+                <div class="more-tag">
+                    <h1 style="color: rgb(255, 255, 255);margin-left: 30px;">HINDI
+                        <a href="morehindipage.html" style="font-size: 20px;color: white;"><i class="fa-solid fa-angles-right"></i></a>
+                    </h1>
+                   </div>
+                <ul id="songsList" style="text-align: center;">
+                   <div class="music-item">
+                    <a href="./tum se hi_mp/thumsehi.html"><img src="Check out _Tum Se Hi (Instrumental)_ by Not….jfif" alt="">
+                        <div class="hover-text">Tum se hi</div></a>
+                   </div>
+                    <div class="music-item">
+                        <a href="./arbab entery_mp/arbabentery.html"><img src="Screenshot (9).png" alt="">
+                            <div class="hover-text">Jmal kondu</div></a>
+                    </div>
+                    <div class="music-item">
+                        <a href="./satranga_mp/sataranga.html"><img src="Screenshot (8).png" alt="">
+                            <div class="hover-text">Satranga</div></a>
+                    </div>
+                    <div class="music-item">
+                        <a href="./blue eyes_mp/blueeyes.html"><img src="fc6c7ac5-f5a4-435d-81ff-6e12d001812b.jfif" alt="">
+                            <div class="hover-text">Blue eyes</div></a>
+                    </div>
+                    <div class="music-item">
+                        <a href="./agar tum sath ho_mp/agartumsathho.html"><img src="AGAR TUM SATH HO [MASHUP] - DJ ANKIT ROHIDA….jfif" alt="">
+                            <div class="hover-text">Agar tum sath</div></a>
+                    </div>
+                  <div class="music-item">
+                    <a href="./gulabi sharee_mp/gulabisharee.html"><img src="Gulabi Sadi - YouTube Music.jfif" alt="">
+                        <div class="hover-text">Gulabi sharee</div></a>
+                  </div>
+                    <div class="music-item">
+                        <a href="./chammak chllo_mp/chammakchllo.html"><img src="20240630_161115.jpg" alt="">
+                            <div class="hover-text">chammak chllo</div></a>
+                    </div>
+                    <div class="music-item">
+                        <a href="./tu chaiye_mp/TuChahiye.html"><img src="Screenshot (13).png" alt="">
+                            <div class="hover-text">Tu chaiye</div></a>
+                    </div>
+                   <div class="music-item">
+                    <a href="./me rang shrbto ka_mp/merangshrbtooka.html"><img src="Screenshot (14).png" alt="">
+                        <div class="hover-text">Me rang sharbto ka</div></a>
+                   </div>
+                   <div class="music-item">
+                    <a href="./radha(student of the year)/radha.html"><img src="20240630_162207.jpg" alt="">
+                        <div class="hover-text">Radha</div></a>
+                   </div>
+                    <div class="music-item">
+                        <a href="./tuje kitna chhane lage ham_mp/tujechahnelage.html"><img src="Screenshot (16).png" alt="">
+                            <div class="hover-text">Tuje kitna chane lage</div></a>
+                    </div>
+                    <div class="music-item">
+                        <a href="./mast magan_mp/mastmagan.html"><img src="20240630_162851.jpg" alt="">
+                            <div class="hover-text">Mast magan</div></a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+     
+     <div class="fade-in">
+        <div class="old">
+            <div class="more-tag">
+                <h1 style="color: rgb(255, 255, 255);margin-left: 30px;">90's & 80's
+              <a href="more90&80page.html" style="font-size: 20px;color: white;"><i class="fa-solid fa-angles-right"></i></a>
+                </h1>
+               </div>
+            <ul style="text-align: center;">
+                <div class="music-item">
+                    <a href="./ohoh jane jana_mp/ohohjanejana.html"><img src="Screenshot (10).png" alt="">
+                    <div class="hover-text">oh oh jane jana</div></a>
+                </div>
+              <div class="music-item">
+                <a href="./phela nasha_mp/phelanasha.html"><img src="20240630_135015.jpg" alt="">
+                <div class="hover-text">phela nasha</div></a>
+              </div>
+               <div class="music-item">
+                <a href="./me pal do pla ka shayar_mp/mepaaldopaal.html"><img src="Screenshot (123).png" alt="">
+                <div class="hover-text">me pal do pal ka shayer hu</div></a>
+               </div>
+              <div class="music-item">
+                <a href="./is dewane ladke ko_mp/issdewaneladkeko.html"><img src="20240630_140016.jpg" alt="">
+                <div class="hover-text">is dewane ladke ko</div></a>
+              </div>
+                <div class="music-item">
+                    <a href="./ye pagla hai_mp/yepaglahai.html"><img src="20240630_140337.jpg" alt="">
+                    <div class="hover-text">ye pagla hai</div></a>
+                </div>
+                <div class="music-item">
+                    <a href="./kabhi kushi kabhi gam_mp/kabhikhusikabhigam.html"><img src="Screenshot (26).png" alt="">
+                    <div class="hover-text">khabi khusi khabi gam</div></a>
+                </div>
+                <div class="music-item">
+                    <a href="./yeh ladka hai dewana_mp/yehadkahaidewana.html"><img src="20240630_170334.jpg" alt="">
+                    <div class="hover-text">yeh ladka hai dewana</div></a>
+                </div>
+                <div class="music-item">
+                    <a href="./jane kaha mera jigar gya ji_mp/janekahajigargyaji.html"><img src="Screenshot (130).png" alt="">
+                    <div class="hover-text">jane kaha mera jigar gya ji</div></a>
+                </div>
+                <div class="music-item">
+                    <a href="./kush kuch hota he_mp/kuchkuchhotahai.html"><img src="Screenshot (28).png" alt="">
+                    <div class="hover-text">kuch kuch hota he</div></a>
+                </div>
+               <div class="music-item">
+                <a href="./are you my soniya_mp/youaremysoniya.html"><img src="20240630_170820.jpg" alt="">
+                 <div class="hover-text">are you my soniya</div></a>
+               </div>
+              <div class="music-item">
+                <a href="./dewangi dewangi_mp/dewangi.html"><img src="20240630_171229.jpg" alt="">
+                <div class="hover-text">dewangi dewangi</div></a>
+              </div>
+                <div class="music-item">
+                    <a href="./tujme raab dihkta he_mp/tujmerabdihktahe.html"><img src="Screenshot (30).png" alt="">
+                    <div class="hover-text">tujme raab dihkta he</div></a>
+                </div>
+            </ul>
+        </div>
+     </div>
+       <div class="fade-in">
+        <div class="popartist">
+            <h1 style="color: white;margin-left: 30px;">Engish-Artist</h1>
+            <ul style="text-align: center;">
+               <div class="pop_ar" style="display: flex;justify-content:center">
+                <div>
+                    <a href="ariana grande2.html"><img src="pop artist/ariana grande.jfif" alt=""></a>
+                    <p style="color:white;margin:0;">Ariana grande</p>
+                </div>
+                <div>
+                    <a href="ed sheeran2.html"><img src="pop artist/edshreern.jfif" alt=""></a>
+                    <p style="color:white;margin:0;">Ed shreern</p>
+                </div>
+                <div>
+                    <a href="harry styles2.html"><img src="pop artist/harrystyles.jfif" alt=""></a>
+                    <p style="color:white;margin:0;">Harry styles</p>
+                </div>
+               <div>
+                <a href="justin bieber2.html"><img src="pop artist/jbiebezr.jfif" alt=""></a>
+                <p style="color:white;margin:0;">justin bieber</p>
+               </div>
+               <div>
+                <a href="charlie puth2.html"><img src="pop artist/Cute Puth 😍😍.jfif" alt=""></a>
+                <p style="color:white;margin:0;">Charlie puth</p>
+               </div>
+                <div>
+                <a href="taylor swift2.html"><img src="pop artist/Folklore Era 🤍.jfif" alt=""></a>
+                <p style="color:white;margin:0;">taylor swift</p>
+                </div>
+               <div>
+                <a href="the weekend2.html"><img src="pop artist/Join Yumii ! ✦.jfif" alt=""></a>
+                <p style="color:white;margin:0;">the weekend</p>
+               </div>
+               <div>
+                <a href="BTS2.html"><img src="pop artist/btsimage.jfif" alt=""></a>
+                <p style="color:white;margin:0;">BTS</p>
+               </div>
+                <div>
+                    <a href="dua lipa 2.html"><img src="pop artist/Dua Lipa.jfif" alt=""></a>
+                    <p style="color:white;margin:0;">Dua lipa</p>
+                </div>
+                <div>
+                    <a href="jason deulo2.html"><img src="pop artist/jd.jfif" alt=""> </a>
+                    <p style="color:white;margin:0;">jason deluo</p>
+                </div>
+               
+               </div>
+            </ul>
+        </div>
+       </div>
+       
+      <div class="fade-in">
+        <div class="hindiartist">
+            <h1 style="color: white;margin-left: 30px;">Hindi-Artist</h1>
+            <ul  style="text-align: center;">
+                <div class="hindi"  style="display: flex;justify-content:center">
+                <div>
+                    <a href="arjit singh2.html"><img src="artist image/arjit.jfif" alt=""></a>
+                    <p style="color:white;margin:0;">Arjit singh</p>
+                </div>
+               <div>
+                <a href="artif aslam2.html"><img src="artist image/aslam.jfif" alt=""></a>
+                <p style="color:white;margin:0;">Artif aslam</p>
+               </div>
+               <div>
+                <a href="ap dillon2.html"><img src="artist image/apdhillon.jfif" alt=""></a>
+                <p style="color:white;margin:0;">AP dhillon</p>
+               </div>
+                <div>
+                    <a href="badhsah2.html"><img src="artist image/badshah1.jfif" alt=""></a>
+                    <p style="color:white;margin:0;">Badshah</p>
+                </div>
+               <div>
+                <a href="king2.html"><img src="artist image/king.jfif" alt=""></a>
+                <p style="color:white;margin:0;">King</p>
+               </div>
+                <div>
+                    <a href="kishor kumar2.html"><img src="artist image/kissor kumar.jfif" alt=""></a>
+                    <p style="color:white;margin:0;">Kishore kumar</p>
+                </div>
+              <div>
+                <a href="kk2.html"><img src="artist image/kk.jfif" alt=""></a>
+                <p style="color:white;margin:0;">KK</p>
+              </div>
+                <div>
+                    <a href="mohit chauhan2.html"><img src="artist image/mohitchaun.jfif" alt=""></a>
+                    <p style="color:white;margin:0;">mohit chauhan</p>
+                </div>
+               <div>
+                <a href="yoyo honey singh.html"><img src="artist image/yoyo.jfif" alt=""></a>
+                <p style="color:white;margin:0;">honey singh</p>
+               </div>
+                <div>
+                 <a href="pritam2.html"><img src="artist image/pritam.jfif" alt=""></a>
+                 <p style="color:white;margin:0;">Pritam</p>
+                 </div>
+                </div>
+            </ul>
+        </div>
+        
+      </div>
+       <div class="fade-in">
+        <div class="punjabi">
+            <div class="more-tag">
+                <h1 style="color: rgb(255, 255, 255);margin-left: 30px;">PUNJABI
+                    <a href="./musicplayer/more punjabi songs.html" style="font-size: 20px;color: white;"><i class="fa-solid fa-angles-right"></i></a>
+                </h1>
+               </div>
+            <ul style="text-align: center;margin-bottom: 20px;">
+                <div class="music-item">
+                    <a href="./same beef_mp/samebrrf.html"><img src="Listen to Same Beef Song by Bohemia on Gaana_com.jfif" alt="">
+                    <div class="hover-text">Same beef</div></a>
+                </div>
+                <div class="music-item">
+                    <a href="./bebe bapu_mp/bebebapu.html"><img src="Screenshot (11).png" alt="">
+                    <div class="hover-text">Bebe bapu</div></a>
+                </div>
+                <div class="music-item">
+                    <a href="./apa fir melange_mp/apafermilange.html"><img src="20240630_152044.jpg" alt="">
+                    <div class="hover-text">Aapa fer milange</div></a>
+                </div>
+               <div class="music-item">
+                <a href="./nach meri rani_mp/nachmererani.html"><img src="Screenshot (17).png" alt="">
+                <div class="hover-text">Nach mere rani</div></a>
+               </div>
+                <div class="music-item">
+                    <a href="./levels_mp/levels.html"><img src="Screenshot (19).png" alt="">
+                    <div class="hover-text">Levels</div></a>
+                </div>
+                <div class="music-item">
+                    <a href="./no game_mp/nogames.html"><img src="Screenshot (20).png" alt="">
+                    <div class="hover-text">No games</div></a>
+                </div>
+                <div class="music-item">
+                    <a href="./true stories_mp/truestories.html"><img src="20240630_164301.jpg" alt="">
+                    <div class="hover-text">True sories</div></a>
+                </div>
+                <div class="music-item">
+                    <a href="./king shit_mp/kingshit.html"><img src="Screenshot (25).png" alt="">
+                    <div class="hover-text">King shit</div></a>
+                </div>
+               <div class="music-item">
+                <a href="./brown munde_mp/brownmunde.html"><img src="Screenshot (22).png" alt="">
+                <div class="hover-text">Brown munde</div></a>
+               </div>
+               <div class="music-item">
+                <a href="./desi kalakar_mp/desikalakar.html"><img src="Screenshot (23).png" alt="">
+                <div class="hover-text">Desi kalakar</div></a>
+               </div>
+                <div class="music-item">
+                    <a href="./945_mp/945.html"><img src="Screenshot (24).png" alt="">
+                    <div class="hover-text">945</div></a>
+                </div>
+                <div class="music-item">
+                    <a href="./execuses_mp/execuses.html"><img src="excuses.jfif.jfif" alt="">
+                    <div class="hover-text">execuses</div></a>
+                </div>
+            </ul>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const faders = document.querySelectorAll('.fade-in');
+                
+                const appearOptions = {
+                    threshold: 0.1,
+                    rootMargin: "0px 0px -50px 0px" // Adjusts when the animation starts based on scroll position
+                };
+            
+                const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        } else {
+                            entry.target.classList.remove('visible');
+                        }
+                    });
+                }, appearOptions);
+            
+                faders.forEach(fader => {
+                    appearOnScroll.observe(fader);
+                });
+            });
+            
+
+        </script>
+       </div>
+        
+       <script>
+function searchSongs() {
+    const input = document.getElementById("searchInput");
+    const filter = input.value.toLowerCase();
+    const songs = document.getElementsByClassName("music-item");
+
+    for (let i = 0; i < songs.length; i++) {
+        const song = songs[i];
+        const titleElement = song.getElementsByClassName("hover-text")[0];
+        const title = titleElement.innerText;
+
+        // Check if the title includes the search term
+        if (title.toLowerCase().includes(filter)) {
+            // Highlight the matching part of the title
+            const regex = new RegExp(`(${filter})`, 'gi');
+            titleElement.innerHTML = title.replace(regex, '<span class="highlight">$1</span>');
+            
+            // Show the song with a fade-in and bounce effect
+            song.style.display = "inline-block";
+            song.style.animation = "fadeIn 0.5s ease forwards";
+        } else {
+            // Hide the song with a fade-out effect
+            song.style.animation = "fadeOut 0.3s ease forwards";
+            setTimeout(() => {
+                song.style.display = "none";
+            }, 300); // Delay to allow the fade-out animation to finish
+        }
+    }
+}
+
+</script>
+    
+  
+       <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="about us.html">about us</a></li>
+                            <li><a href="our service.html">our services</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="Q&A.html">FAQ</a></li>
+                            <li><a href="privacy policy.html">privacy policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-phone" style="color:#e91e63;"></i> +91 90904500112</a></li>
+                            <li><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"><i class="fa-solid fa-envelope" style="color:#e91e63;"></i> musicplayer7893@gmail.com</a></li>
+                            <li><a href="send feedback.html"><i class="fa-solid fa-paper-plane" style="color:#e91e63;"></i> send feedback</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/neel_2_009/?next=%2F"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </footer>  
+</body>
+</html>
